@@ -1,4 +1,4 @@
-# Machine Learning Pipeline for Movie Recommender System build by Apache Spark's ML Libary
+# Machine Learning Pipeline for Movie Recommender System built by Apache Spark's ML Libary
 
 ```python
 from pyspark import SparkConf
