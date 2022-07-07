@@ -20,15 +20,6 @@ movies= spark.read.csv("./movies.csv", inferSchema = True, header = True)
 ratings = spark.read.csv("./ratings.csv", inferSchema = True, header = True)
 ```
 
-    22/07/08 00:17:59 WARN Utils: Your hostname, DESKTOP-LR48F7J resolves to a loopback address: 127.0.1.1; using 172.23.223.31 instead (on interface eth0)
-    22/07/08 00:17:59 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
-    22/07/08 00:18:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-    Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
-    Setting default log level to "WARN".
-    To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-
-
-
 ```python
 movies.show(5, truncate = False)
 ratings.show(5)
@@ -115,9 +106,6 @@ for genre in moviesGR.select("genres").distinct().collect():
     count += 1
     if (count == 3): break
 ```
-
-                                                                                    
-
     Crime
     +-------------------------------------------------------+
     |title                                                  |
@@ -134,11 +122,7 @@ for genre in moviesGR.select("genres").distinct().collect():
     |Decalogue, The (Dekalog) (1989)                        |
     +-------------------------------------------------------+
     
-    Romance
-
-
-                                                                                    
-
+    Romance                                                                                  
     +----------------------------------------------------------------+
     |title                                                           |
     +----------------------------------------------------------------+
@@ -216,11 +200,6 @@ modelExplicit = alsExplicit.fit(trainingSet)
 predictionsExplicit = modelExplicit.transform(testSet)
 predictionsExplicit.show()
 ```
-
-    22/07/08 00:18:15 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
-    22/07/08 00:18:15 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
-    22/07/08 00:18:15 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
-    22/07/08 00:18:15 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
     [Stage 89:================================================>     (181 + 1) / 200]
 
     +------+-------+------+----------+----------+
